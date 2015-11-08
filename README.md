@@ -1,5 +1,5 @@
 # polish-use-border-radius-mixin
-PolishCSS plugin to enforce the use of a consistent border radius in SCSS.
+[Polish](https://github.com/brendanlacroix/polish-css) plugin to enforce the use of a consistent border radius in SCSS.
 
 `border-radius` values of 50% or higher are not flagged, because they are almost exclusively used to create circles.
 
