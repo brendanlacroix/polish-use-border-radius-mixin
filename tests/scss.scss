@@ -1,0 +1,33 @@
+/* should fail */
+.bad {
+  border-radius: 13px;
+  border-radius: 10%;
+  border-top-left-radius: 10%;
+  border-radius: 10px / 50px;
+  border-radius: 0;
+}
+
+.nasty-class {
+  .bad {
+    border-radius: 13px;
+    border-radius: 10%;
+    border-top-left-radius: 10%;
+    border-radius: 10px / 50px;
+    border-radius: 0;
+  }
+}
+
+/* should pass */
+.cool-really-good-selector {
+  @include border-radius;
+
+  .nested {
+    @include border-radius;
+  }
+}
+
+.great {
+  @include border-radius(top-left);
+  border: 1px;
+  border-radius: 50%;
+}
